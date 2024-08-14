@@ -19,14 +19,14 @@ To retrieve all images
 ```shell
 $ python data_pull.py -a 
 ```
-The above two commands will output verbose processing details to standard output as albums and album pages fetched. A logging file will be generated to catch exceptions called `log_it_{_time stamp_}.log`. If `data_pull.py` runs successfully then a file called `data_pull_{time stamp}.p.json` will contain the data. 
+The above two commands will output verbose processing details to standard output as albums and album pages are fetched. A logging file will be generated to catch exceptions called `log_it_{time stamp}.log`. If `data_pull.py` runs successfully then a file called `data_pull_{time stamp}.p.json` will contain the data. 
 ### Environment Requirements
 To install all the necessary dependencies 
 ```shell
 $ pip install -r data_pull.requirements.txt
 ```
 ### API Credentials
-Apply for an API [flickr.com/services/apps/create/apply/](https://www.flickr.com/services/apps/create/apply/)
+Apply for API credentials at [flickr.com/services/apps/create/apply/](https://www.flickr.com/services/apps/create/apply/). With the acquired credentials fill the `.env` template. 
 #### Flickr API Documentation
 [flickr.com/services/api/](https://www.flickr.com/services/api/)
 
