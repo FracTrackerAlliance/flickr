@@ -33,6 +33,8 @@ def get_data_t(flickr, a_id, extra_fields):
 
             record = {
                 'id': pid,
+				'album_name': album_name,
+				'album_id':a_id,
                 'title': title,
                 'lat': lat,
                 'lon': lon,
