@@ -24,6 +24,8 @@ def get_data_t(flickr, a_id, extra_fields):
         for pic in photos['photoset']['photo']:
             if pic['media'] != 'photo': continue # skip videos
             if not GET_NON_GEO and ('latitude' not in pic or pic['latitude'] is None or pic['latitude'] == 0): continue # skip non-geo tagged
+            # direct_link = pic.get('url_m', None)
+            # if direct_link is None: 
             attr.append({
                 'id': pic['id'],
                 'album_name': album_name,
@@ -38,14 +40,14 @@ def get_data_t(flickr, a_id, extra_fields):
                 'o_width': pic['o_width'],
                 'o_height': pic['o_height'],
                 'views': pic['views'],
-                'src_url': pic['url_m'],
+                'src_url': pic.get('url_m', pic.get('url_sq', pic.get('url_o', None))),
                 'link': f"https://www.flickr.com/photos/fractracker/{pic['id']}/in/album-{a_id}"
             })
             global pic_ct; pic_ct += 1
         pg_start += 1
 
 def create_worker(flickr, album_ids):
-    extra_fields ='date_upload, date_taken, owner_name, original_format, last_update, geo, tags, o_dims, views, media, url_o'
+    extra_fields ='date_upload, date_taken, owner_name, original_format, last_update, geo, tags, o_dims, views, media, url_m, url_o, url_s'
     thread_pool = []
     for a_id in album_ids: # thread worker for each album
         t =Thread(target=get_data_t, args=(flickr, a_id, extra_fields))
