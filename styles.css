@@ -1,0 +1,57 @@
+label {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333; /* Matching label color */
+}
+
+input:focus, select:focus {
+    border-color: #28a745; /* Changed to FracTracker's green */
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Matching green shadow */
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745; /* FracTracker green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Darker shade of green for hover */
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 300px; /* Reduced logo size */
+    height: auto;
+    display: inline-block;
+    margin-bottom: 10px; /* Add some space below the logo */
+}

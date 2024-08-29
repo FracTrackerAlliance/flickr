@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FracTracker Photo Data Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-header">
+        <img src="Fractracker_logo.png" alt="FracTracker Alliance Logo" class="logo">
+    </div>
+    
+    <!-- Form Fields -->
+    <form id="photoDataForm">
+        <label for="photographer">Photographer:</label>
+        <input type="text" id="photographer" placeholder="Enter photographer's full name">
+    
+        <label for="topic">Topic:</label>
+        <input type="text" id="topic" placeholder="Describe the main topic of the photo">
+    
+        <label for="siteSpecific">Site Specific:</label>
+        <input type="text" id="siteSpecific" placeholder="Enter the specific site location">
+    
+        <label for="siteOwner">Site Owner:</label>
+        <input type="text" id="siteOwner" placeholder="Who owns the site?">
+    
+        <label for="county">County:</label>
+        <input type="text" id="county" placeholder="Enter the county name">
+    
+        <label for="state">State:</label>
+        <input type="text" id="state" placeholder="Enter the state name">
+    
+        <label for="partnerAffiliation">Partner Affiliation:</label>
+        <input type="text" id="partnerAffiliation" placeholder="Enter the partner organization's name">
+    
+        <label for="date">Date:</label>
+        <input type="date" id="date">
+    
+        <!-- Buttons -->
+        <button type="button" onclick="submitFormData()">Submit</button>
+        <button type="button" onclick="clearData()">Clear</button>
+        <button type="button" onclick="copyTitleToClipboard()">Copy Title</button>
+    </form>
+
+    <!-- Div to Display Data or Error Messages -->
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
